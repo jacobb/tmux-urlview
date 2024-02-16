@@ -12,6 +12,8 @@ get_tmux_option() {
 }
 
 find_executable() {
+  if type urlx >/dev/null 2>&1; then
+    echo "urlx choose"
   if type urlview >/dev/null 2>&1; then
     echo "urlview"
   elif type extract_url >/dev/null 2>&1; then
